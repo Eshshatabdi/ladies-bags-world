@@ -39,8 +39,19 @@ const Product = () => {
                 <div className='bg-light'>
                     <h3>Order the item</h3>
 
+                    {
+                        carts.map(cart => <li key={cart.id}>{cart.name}</li>)
+                    }
+
+                    <div>
+                        <button className='bg-danger'>Choose product</button>
+                    </div>
+
+
                 </div>
+
             </div>
+
 
         </div>
     );
