@@ -8,6 +8,8 @@ import image6 from '../../Dkny.jpg';
 import image7 from '../../markjeckob.jpg';
 import image8 from '../../prada.jpg';
 import image9 from '../../prada.jpg';
+import Card from '../Card/Card';
+
 
 
 const Product = () => {
@@ -75,12 +77,23 @@ const Product = () => {
     // ]
     return (
         <div>
-            <h2>Ladis Bags</h2>
-            {
-                products.map(product => console.log(product.id
+            <h2 className='text-center color-info'>Ladis Bags</h2>
 
-                ))
-            }
+            <div className="d-flex">
+                <div className="row container">
+                    {
+                        products.map(product => <Card
+                            key={product.id}
+                            product={product}></Card>)
+
+                    }
+
+                </div>
+                <div className='bg-light'>
+                    <h3>Order the item</h3>
+
+                </div>
+            </div>
 
         </div>
     );
