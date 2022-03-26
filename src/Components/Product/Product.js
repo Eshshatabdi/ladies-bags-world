@@ -35,39 +35,31 @@ const Product = () => {
 
         setItem(random);
         console.log(random)
-        // const random = Math.floor(Math.random() * product.length)
-        // setItem(random)
 
 
     }
     const removeCart = () => {
         let clearData = [];
         setCarts(clearData)
-        // setRemove([])
+
     }
 
     return (
         <div>
             <h2 className='text-center text-primary'>Ladies Bags World</h2>
 
-            <div className="d-flex">
-                <div className="row container">
-                    {
-                        products.map(product => <Card
-                            key={product.id}
-                            product={product}
-                            handleAddToCart={handleAddToCart}></Card>)
-
-                    }
-
-                </div>
+            <div>
                 <div className='bg-light'>
                     <h4>Choose your item</h4>
 
                     {
-                        // carts.map(cart => <li key={cart.id}>{cart.name}</li>)
+
                         carts.map(cart => <Cart key={cart.id} cart={cart}></Cart>)
                     }
+                    <div>
+                        <h4>{item.name}
+                        </h4>
+                    </div>
 
                     <div>
                         <button onClick={() => { chooseItems(carts) }} className='bg-primary text-white border-0 radius'>Choose product</button>
@@ -79,6 +71,25 @@ const Product = () => {
 
 
                 </div>
+
+
+
+
+
+
+
+
+                <div className="row container">
+                    {
+                        products.map(product => <Card
+                            key={product.id}
+                            product={product}
+                            handleAddToCart={handleAddToCart}></Card>)
+
+                    }
+
+                </div>
+
 
             </div>
 
