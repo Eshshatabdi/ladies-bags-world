@@ -11,9 +11,9 @@ const Product = () => {
     const [carts, setCarts] = useState([]);
 
 
-    const [item, setItem] = useState(0);
+    const [item, setItem] = useState([]);
 
-    const [remove, setRemove] = useState([]);
+
 
 
 
@@ -30,16 +30,19 @@ const Product = () => {
 
     }
 
-    const chooseItems = (item) => {
-        const len = [...carts];
-        const newLen = len.find(pd => pd.name === 'name')
-        setItem(newLen);
+    const chooseItems = (carts) => {
+        let random = carts[Math.floor(Math.random() * carts.length)]
+
+        setItem(random);
+        console.log(random)
         // const random = Math.floor(Math.random() * product.length)
         // setItem(random)
 
-        console.log(newLen)
+
     }
     const removeCart = () => {
+        let clearData = [];
+        setCarts(clearData)
         // setRemove([])
     }
 
@@ -67,9 +70,9 @@ const Product = () => {
                     }
 
                     <div>
-                        <button onClick={() => { chooseItems() }} className='bg-primary text-white border-0 radius'>Choose product</button>
+                        <button onClick={() => { chooseItems(carts) }} className='bg-primary text-white border-0 radius'>Choose product</button>
                         <br />
-                        <button onClick={() => { removeCart(item) }} className='mt-3 bg-primary text-white border-0 radius'>Choose Again</button>
+                        <button onClick={removeCart} className='mt-3 bg-primary text-white border-0 radius'>Choose Again</button>
 
 
                     </div>
