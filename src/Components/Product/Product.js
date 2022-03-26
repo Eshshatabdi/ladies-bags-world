@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 import Cart from '../Cart/Cart';
+import Qusans from '../Quans/Qusans';
 
 
 
@@ -76,6 +77,10 @@ const Product = () => {
 
                 </div>
 
+            </div>
+
+            <div className=' row container'>
+                <Qusans></Qusans>
             </div>
 
 

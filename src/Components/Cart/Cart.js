@@ -1,9 +1,18 @@
 import React from 'react';
+import Qusans from '../Quans/Qusans';
 
 const Cart = ({ cart }) => {
+    const { name } = cart
     return (
         <div>
-            <li>{cart.name}</li>
+
+            <li>{name}</li>
+
+
+
+
+
+
 
 
 
