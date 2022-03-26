@@ -10,7 +10,7 @@ const Card = ({ product, handleAddToCart }) => {
                 <img src={image} alt="" />
                 <h3>name:{name}</h3>
                 <p>price:{price}</p>
-                <button onClick={() => { handleAddToCart(product) }} className='bg-danger'>Add to Cart <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
+                <button onClick={() => { handleAddToCart(product) }} className='bg-primary text-white border-0 radius'>Add to Cart <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
                 </button>
 
 
